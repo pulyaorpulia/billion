@@ -9,8 +9,8 @@ body {
     background: url('images/header-bg.png') no-repeat center center;
     background-size: contain; /* Rasm to‘liq ko‘rinadi, kesilmaydi */
     background-attachment: fixed; /* Scroll qilganda fon ham harakatlanadi */
-    background-color: #be36b7; /* Bo‘sh joylarni rang bilan to‘ldirish */
-    color: #19b74b;
+    background-color: #ccce576f; /* Bo‘sh joylarni rang bilan to‘ldirish */
+    color: #b19d1e;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -35,12 +35,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 90px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.8));
+    background: linear-gradient(90deg, rgba(113, 70, 70, 0.9), rgba(20, 20, 20, 0.8));
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(195, 80, 80, 0.416);
     transition: all 0.3s ease;
 }
 
@@ -114,7 +114,7 @@ header {
 }
 
 .address-box {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(176, 142, 31, 0.7);
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
@@ -143,7 +143,7 @@ header {
 }
 
 .content-box {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(62, 48, 37, 0.756);
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
@@ -162,8 +162,8 @@ section h2 {
 }
 
 section p, section ul, section ol {
-    font-size: 18px;
-    color: #19b74b;
+    font-size: 22px;
+    color: #98952a;
 }
 
 section ul, section ol {
@@ -173,26 +173,51 @@ section ul, section ol {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 30px;
-    text-align: center;
+    background: url('images/backqground.png') no-repeat center center; /* Rasm manzili */
+    background-size: cover; /* Rasmni to'liq qoplash */
+    background-position: center bottom; /* Rasmni pastki qismda joylash */
+    padding: 40px 20px; /* Ichki chegaralar */
+    text-align: center; /* Matnni markazga joylash */
+    color: white; /* Matn rangi */
+    position: relative; /* Relative pozitsiya */
+    z-index: 1; /* Elementlarni ustma-ust joylashishda ustunlik */
+    overflow: hidden; /* Blur effekti uchun */
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Fon rasmni olish */
+    filter: blur(8px); /* Blur effekti */
+    z-index: -1; /* Kontentni blur ostida qoldirish */
+}
+
+footer h3 {
+    margin-bottom: 20px; /* Sarlavha ostidagi bo'sh joy */
+    font-size: 24px; /* Sarlavha o'lchami */
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Social linklarni yonma-yon joylash */
+    justify-content: center; /* Markazga joylash */
+    gap: 60px; /* Linklar orasidagi masofa */
 }
 
-.social-links a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
+.social-links img {
+    width: 80px; /* Iconlarning o'lchami */
+    height: 80px;
+    transition: transform 0.3s ease; /* Hover animatsiyasi */
 }
 
-.social-links a img:hover {
-    transform: scale(1.2);
+.social-links img:hover {
+    transform: scale(1.2); /* Hover paytida kattalashtirish */
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
