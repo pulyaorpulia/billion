@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billion Air (BAIR)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Billion Air Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#how-to-buy">How to Buy</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>Billion Air (BAIR)</h1>
+            <div class="address-box">
+                <p>Contract Address: <span id="contract">0x1234...5678</span></p>
+                <button onclick="copyContract()">Copy</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="content-box">
+            <h2>About</h2>
+            <p>BillionAir platform is a trustless and secure blockchain gaming ecosystem giving you a chance to own a piece of an exponentially growing industry and get a share of the revenue from its exceptional combination of gaming, betting, and a unique raffle solution which is the first-ever of this scale, offering cash prizes, physical and digital items, and experiences.</p>
+            <p>Join a revolutionary platform where transparency meets entertainment. With BillionAir, you're not just a player—you're a stakeholder in the future of decentralized gaming.</p>
+        </div>
+    </section>
+
+    <section id="tokenomics">
+        <div class="content-box">
+            <h2>Tokenomics</h2>
+            <p><strong>Total Supply:</strong> 1,000,000,000 BAIR</p>
+            <p><strong>Initial Distribution:</strong></p>
+            <ul>
+                <li>40% - Public Sale</li>
+                <li>20% - Liquidity Pool</li>
+                <li>15% - Team & Advisors (locked for 12 months)</li>
+                <li>15% - Ecosystem Development</li>
+                <li>10% - Marketing & Partnerships</li>
+            </ul>
+            <p><strong>Utility:</strong> BAIR tokens are used for in-game purchases, betting, raffle entries, and governance within the BillionAir ecosystem. Holders also receive a share of platform revenue through staking mechanisms.</p>
+        </div>
+    </section>
+
+    <section id="how-to-buy">
+        <div class="content-box">
+            <h2>How to Buy BAIR</h2>
+            <p>Follow these simple steps to purchase BAIR tokens:</p>
+            <ol>
+                <li><strong>Create a Wallet:</strong> Set up a compatible wallet like MetaMask or Trust Wallet.</li>
+                <li><strong>Add Funds:</strong> Deposit ETH, BNB, or USDT to your wallet.</li>
+                <li><strong>Connect to a DEX:</strong> Visit a decentralized exchange like Uniswap or PancakeSwap.</li>
+                <li><strong>Swap for BAIR:</strong> Use the contract address above to swap your tokens for BAIR.</li>
+                <li><strong>Stake & Earn:</strong> Stake your BAIR tokens on our platform to earn rewards!</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Follow Us</h3>
+        <div class="social-links">
+            <a href="https://t.me/billionair" target="_blank"><img src="images/telegram-icon.png" alt="Telegram"></a>
+            <a href="https://x.com/billionair" target="_blank"><img src="images/x-icon.png" alt="X"></a>
+            <a href="https://dexscreener.com" target="_blank"><img src="images/dexscreener-icon.png" alt="Dexscreener"></a>
+            <a href="https://discord.gg/billionair" target="_blank"><img src="images/discord-icon.png" alt="Discord"></a>
+        </div>
+    </footer>
+
+    <script>
+        function copyContract() {
+            navigator.clipboard.writeText("0x1234...5678");
+            alert("Contract address copied!");
+        }
+
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+</html>
