@@ -44,6 +44,7 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Logo stil */
 .logo img {
     width: 60px;
     height: 60px;
@@ -54,6 +55,7 @@ header {
     transform: scale(1.1);
 }
 
+/* Nav-links stil */
 .nav-links {
     display: flex;
     list-style: none;
@@ -88,6 +90,54 @@ header {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+/* Hamburger menyu (kichik ekranlar uchun) */
+.burger {
+    display: none; /* Katta ekranlarda yashirish */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Kichik ekranlar uchun stil */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Paddingni kamaytirish */
+    }
+
+    .burger {
+        display: flex; /* Hamburger menyuni ko'rsatish */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px; /* Navbar pastida joylash */
+        right: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(20, 20, 20, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .nav-links.active {
+        height: 300px; /* Menyu ochilganda balandlik */
+    }
+
+    .nav-links li {
+        margin: 20px 0; /* Linklar orasidagi masofa */
+    }
 }
 
 .burger {
