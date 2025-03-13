@@ -291,6 +291,16 @@ footer h3 {
     body {
         background-size: contain;
     }
+
+    .social-links {
+        gap: 20px; /* Kichik ekranlarda linklar orasidagi masofani kamaytirish */
+        flex-wrap: wrap; /* Linklarni qatorga sig'masa, yangi qatorga tushirish */
+    }
+
+    .social-links img {
+        width: 30px; /* Kichik ekranlarda iconlarning o'lchamini kamaytirish */
+        height: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -334,5 +344,15 @@ footer h3 {
 
     body {
         background-size: contain;
+    }
+
+    .social-links {
+        gap: 20px; /* Kichik ekranlarda linklar orasidagi masofani kamaytirish */
+        flex-wrap: wrap; /* Linklarni qatorga sig'masa, yangi qatorga tushirish */
+    }
+
+    .social-links img {
+        width: 30px; /* Kichik ekranlarda iconlarning o'lchamini kamaytirish */
+        height: 30px;
     }
 }
