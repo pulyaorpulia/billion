@@ -254,12 +254,12 @@ footer h3 {
 .social-links {
     display: flex; /* Social linklarni yonma-yon joylash */
     justify-content: center; /* Markazga joylash */
-    gap: 60px; /* Linklar orasidagi masofa */
+    gap: 40px; /* Linklar orasidagi masofa */
 }
 
 .social-links img {
-    width: 80px; /* Iconlarning o'lchami */
-    height: 80px;
+    width: 50px; /* Iconlarning o'lchami */
+    height: 50px;
     transition: transform 0.3s ease; /* Hover animatsiyasi */
 }
 
@@ -267,6 +267,10 @@ footer h3 {
     transform: scale(1.2); /* Hover paytida kattalashtirish */
 }
 
+.social-links a[href*="odin.fun"] img {
+    width: auto; /* Odin logosi asl o‘lchamida bo‘lishi uchun */
+    height: 50px; /* Balandligini umumiy icon balandligiga moslashtirish */
+}
 
 
 /* Responsive Design */
